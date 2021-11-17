@@ -14,4 +14,4 @@ Previously installed Pythonv 3.5
 - to run main 
   - python main.py 
 - to run tests
-  - python test.py # to perform tests
+  - python test.py
