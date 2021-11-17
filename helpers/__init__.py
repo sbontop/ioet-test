@@ -60,3 +60,47 @@ class TimeTracker:
         # case 11: does not overwrite within different days
         else:
             return False          
+
+def load_tt(filename):
+    """Returns a Timetracker Dictionary"""
+    tt_dic = {}    
+    file = open(filename, "r")
+    for line in file:
+        line = line.strip('').strip('\n').split('=')
+        username = line[0]
+
+        if username not in tt_dic:
+            tt_dic[username] = []
+
+        times = line[1].split(',')
+        for time in times:
+            dt = time.split('-')
+            day = dt[0][:2]
+            hour_start = dt[0][2:4]
+            minute_start = dt[0][5:]
+            hour_end = dt[1][:3]
+            minute_end = dt[1][3:]
+
+            tt_input = {
+                "username": username,
+                "day": day,
+                "hour_start": hour_start,
+                "minute_start": minute_start,
+                "hour_end": hour_end,                
+                "minute_end": minute_end,
+            }
+            timetracker = TimeTracker(tt_input)
+            tt_dic[username].append(timetracker)
+    return tt_dic
+
+def combinations(arr, n):
+    """Returns a list of combinations of arr grouped by n"""
+    if n == 0:
+        return [[]]
+    l =[]
+    for i in range(0, len(arr)):
+        m = arr[i]
+        remLst = arr[i + 1:]
+        for p in combinations(remLst, n-1):
+            l.append([m]+p)
+    return l

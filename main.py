@@ -2,12 +2,10 @@
 Position: Senior Python Developer
 Candidate: Samuel Braganza
 """
+from helpers import load_tt
+from helpers import combinations
 
-from helpers.combinations import combinations
-from helpers.files import load_tt
-
-
-def timesheet():
+def main():
     # filename = 'files/test-1.txt'
     filename = 'files/test-2.txt'
     tt_dic = load_tt(filename)
@@ -32,4 +30,4 @@ def timesheet():
 
 
 if __name__ == '__main__':
-    timesheet()
+    main()
