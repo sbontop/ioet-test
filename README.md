@@ -9,6 +9,6 @@ Naive Approach: Traverse through all possible hour and minutes combinations from
 
 ## Setup
 Previously installed Pythonv 3.5
-cd ioet-test/
-python main.py # to run main app
-python test.py # to perform tests
+- cd ioet-test/
+- python main.py # to run main app
+- python test.py # to perform tests
