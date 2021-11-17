@@ -6,8 +6,11 @@ from helpers import load_tt
 from helpers import combinations
 
 def main():
-    # filename = 'files/test-1.txt'
-    filename = 'files/test-2.txt'
+    # filename = 'files/1.txt'
+    # filename = 'files/2.txt'
+    # filename = 'files/3.txt'
+    # filename = 'files/4.txt'
+    filename = 'files/5.txt'
     tt_dic = load_tt(filename)
     tt_values = list(tt_dic.values())
     coincided_dic = {}
@@ -23,8 +26,8 @@ def main():
                 if coincided_key not in coincided_dic:
                     coincided_dic[coincided_key] = 0
                 if tt1.is_overwritten(tt2):
-                    print('Current timetracker ({}) overwrites existing timetracker ({})'
-                            .format(str(tt2), str(tt1)))
+                    # print('Current timetracker ({}) overwrites existing timetracker ({})'
+                    #         .format(str(tt2), str(tt1)))
                     coincided_dic[coincided_key] += 1
     print(coincided_dic)
 
