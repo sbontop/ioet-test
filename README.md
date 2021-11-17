@@ -8,7 +8,7 @@ The architecture consists of several text files to populate the data that later 
 Naive Approach: Traverse through all possible hour and minutes combinations from employees to perform validations filters, run several validation tests to provide a robust, reliable and optimal solution
 
 # Setup
-Previously installed Pythonv 3.5
+Previously installed Python v3.5
 - go to root directory
   - cd ioet-test/
 - to run main 
